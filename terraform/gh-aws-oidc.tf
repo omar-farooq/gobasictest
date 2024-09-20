@@ -38,7 +38,7 @@ resource "aws_iam_policy" "ecr_deploy" {
     Version     = "2012-10-17"
     Statement   = [
       {
-        Action = ["ecr:DescribeImages", "ecr:DescribeRepositories", "ecr:BatchGetImage", "ecr:BatchCheckLayerAvailability", "ecr:CompleteLayerUpload", "ecr:InitiateLayerUpload", "ecr:PutImage", "ecr:UploadLayerPart", "ecr:GetDownloadUrlForLayer",]
+        Action = ["ecr:DescribeImages", "ecr:DescribeRepositories", "ecr:BatchGetImage", "ecr:BatchCheckLayerAvailability", "ecr:CompleteLayerUpload", "ecr:InitiateLayerUpload", "ecr:PutImage", "ecr:UploadLayerPart", "ecr:GetDownloadUrlForLayer", "ecr:GetAuthorizationToken"]
         Effect = "Allow"
         Resource = "*"
       },

@@ -1,7 +1,7 @@
 name: Docker image build and publish
 on:
   push:
-  workflow_dispatch:
+    #  workflow_dispatch:
     inputs:
       path_to_dockerfile:
         description: Path to the dockerfile (default = 'Dockerfile')
@@ -63,7 +63,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v3
         with:
           role-to-assume: arn:aws:iam::509399598081:role/GHActions20240920000443762500000001
-          aws-region: "us-east-1"
+          aws-region: ${{ inputs.aws_region }}
 
       - name: Login to Amazon ECR
         id: login-ecr
