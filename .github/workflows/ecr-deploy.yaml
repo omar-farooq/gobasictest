@@ -2,6 +2,14 @@ name: Docker image build and publish
 on:
   push:
 
+env:
+  AWS_ACCOUNT_ID: "509399598081"
+  AWS_REGION: "us-east-1"
+  DOCKER_BUILD_DIR: "gohelloworld"
+  ECR_REPO_NAME: "omar_eks_test"
+  IMAGE_TAG: "snapshot-artifact"
+  LIFECYCLE_POLICY_FILE: "e2e-test/policy.json"
+
 jobs:
   docker:
     runs-on: ubuntu-latest
