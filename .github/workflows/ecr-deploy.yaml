@@ -1,6 +1,6 @@
 name: Docker image build and publish
-on:
-  push:
+  #on:
+  #  push:
 
 env:
   AWS_ACCOUNT_ID: "509399598081"

@@ -16,9 +16,13 @@ spec:
       creationTimestamp: null
       labels:
         app: hellotest
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/port: '8080'
+        prometheus.io/path: '/metrics'
     spec:
       containers:
-      - image: omargo:latest
+      - image: omargo:0.1
         imagePullPolicy: Never
         name: replaceme
         resources: {}
